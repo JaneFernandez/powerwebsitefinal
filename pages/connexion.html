@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Power Website - Connexion</title>
+    <meta name="description" content="Connecte-toi à ton espace personnel Power Website pour accéder à tes programmes d'entraînement et suivre ta progression.">
+    <!-- Page d'espace personnel : sans intérêt pour les moteurs de recherche -->
+    <meta name="robots" content="noindex, follow">
+
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/connexion.css" />
+  </head>
+  <body class="page-simple">
+    <a class="lien-evitement" href="#contenu-principal">Aller au contenu principal</a>
+
+    <header>
+      <nav aria-label="Navigation principale">
+        <a href="accueil.html">Accueil</a>
+        <a href="../index.html">Quiz</a>
+        <a href="programmes.html">Programmes</a>
+        <a href="accueil.html#abonnements">Abonnements</a>
+        <a href="contact.html">Contact</a>
+        <a href="connexion.html" aria-current="page">Connexion</a>
+        <button id="bouton-police-dyslexie" type="button" class="btn-accessibilite" aria-pressed="false">
+          Police dyslexie
+        </button>
+      </nav>
+    </header>
+
+    <main id="contenu-principal">
+      <h1>Bon retour</h1>
+      <p>Connecte-toi à ton <strong>compte</strong></p>
+
+      <form id="formulaire-connexion" novalidate>
+        <div class="groupe-champ">
+          <label for="champ-email" class="etiquette">Ton email</label>
+          <input type="email" id="champ-email" name="email" class="champ-texte"
+                 data-regle="email" autocomplete="email" placeholder="nom@exemple.com" required />
+        </div>
+
+        <div class="groupe-champ">
+          <label for="champ-password" class="etiquette">Ton mot de passe</label>
+          <input type="password" id="champ-password" name="password" class="champ-texte"
+                 data-regle="motdepasse" autocomplete="current-password" required />
+        </div>
+
+        <button type="submit" class="btn-simple btn-gold" title="Envoyer le formulaire de connexion">Se connecter</button>
+      </form>
+
+      <p class="lien-secondaire">
+        Pas encore de compte ? <a href="../index.html" title="Retour au quiz d'inscription">Inscris-toi ici</a>
+      </p>
+    </main>
+
+    <footer class="pied-de-page">
+      <p>&copy; 2026 Power Website - Tous droits réservés.</p>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/validation.js"></script>
+    <script src="../assets/js/connexion.js"></script>
+  </body>
+</html>

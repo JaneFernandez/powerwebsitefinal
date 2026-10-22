@@ -1,0 +1,399 @@
+/* ============================================================
+   common.css
+   Classes utilitaires et règles partagées par TOUTES les pages.
+   Toute règle utilisée sur 2 pages ou plus doit vivre ici,
+   jamais être dupliquée dans un CSS de page.
+   Aucun style inline dans le HTML : tout passe par des classes.
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* --- Couleurs et texte utilitaire --- */
+.text-gold {
+    color: #c99c3a;
+}
+
+.text-muted-accessible {
+    color: #495057 !important;
+}
+
+/* --- Accessibilité : masqué visuellement mais lu par les lecteurs d'écran --- */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* --- Lien d'évitement ("Aller au contenu") : navigation clavier --- */
+.lien-evitement {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    background-color: #c99c3a;
+    color: #000000;
+    padding: 12px 20px;
+    z-index: 2000;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: top 0.2s ease-in-out;
+}
+
+.lien-evitement:focus {
+    top: 0;
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
+}
+
+/* --- Focus clavier visible partout --- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #c99c3a;
+    outline-offset: 2px;
+}
+
+/* --- Cartes --- */
+.card-img-top {
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+.card {
+    height: 100% !important;
+}
+
+/* Carte d'abonnement mise en avant (remplace les styles inline) */
+.carte-populaire {
+    border: 2px solid #c99c3a !important;
+}
+
+/* Texte NOIR sur fond or : contraste ~8:1 (le blanc sur or n'atteignait que ~2,3:1) */
+.bandeau-populaire {
+    background-color: #c99c3a;
+    color: #000000;
+}
+
+/* --- Boutons or (Bootstrap + pages simples) --- */
+.btn-gold {
+    background-color: #c99c3a;
+    color: #000000;
+    font-weight: bold;
+    border: none;
+}
+
+.btn-gold:hover {
+    background-color: gold;
+    color: #000000;
+}
+
+/* --- Logo de la navbar (anciennement en style inline sur 3 pages) --- */
+.logo-lien {
+    position: relative;
+}
+
+.logo-nav {
+    height: 50px;
+    width: auto;
+    position: absolute;
+    top: -17px;
+    left: 0;
+    z-index: 1000;
+}
+
+/* --- Pied de page unique pour toutes les pages --- */
+.pied-de-page {
+    padding: 25px 15px;
+    text-align: center;
+    background-color: #000000;
+    color: #b0b0b0;
+    font-size: 0.9rem;
+}
+
+.pied-de-page p {
+    margin: 0;
+    font-size: inherit;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-transform: none;
+    color: inherit;
+}
+
+/* ============================================================
+   Police OpenDyslexic
+   ============================================================ */
+@font-face {
+    font-family: 'OpenDyslexic';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('https://cdn.jsdelivr.net/fontsource/fonts/opendyslexic@latest/latin-400-normal.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/fontsource/fonts/opendyslexic@latest/latin-400-normal.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'OpenDyslexic';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('https://cdn.jsdelivr.net/fontsource/fonts/opendyslexic@latest/latin-700-normal.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/fontsource/fonts/opendyslexic@latest/latin-700-normal.woff') format('woff');
+}
+
+body.police-dyslexie,
+body.police-dyslexie * {
+    font-family: 'OpenDyslexic', "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+}
+
+.btn-accessibilite {
+    background: transparent;
+    border: 1px solid #c99c3a;
+    color: #c99c3a;
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    margin-left: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-accessibilite:hover,
+.btn-accessibilite[aria-pressed="true"] {
+    background-color: #c99c3a;
+    color: #000000;
+}
+
+/* ============================================================
+   Pages Bootstrap sombres (programmes, contact)
+   ============================================================ */
+body.page-sombre {
+    background-color: #111;
+    color: #ffffff;
+    padding-top: 90px;
+}
+
+/* ============================================================
+   Pages "simples" sans Bootstrap (index = quiz, connexion)
+   Tout ce qui était dupliqué entre index.css et connexion.css
+   vit ici ; les CSS de page ne gardent que les différences.
+   ============================================================ */
+body.page-simple {
+    font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    background-color: #000000;
+    color: #c99c3a;
+    margin: 0;
+}
+
+.page-simple h1 {
+    font-size: clamp(2.2rem, 9vw, 3.5rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: -2px;
+    color: #ffffff;
+}
+
+.page-simple h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #c99c3a;
+    margin: 20px auto;
+}
+
+.page-simple main p {
+    font-size: 20px;
+    color: #c99c3a;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.page-simple .lien-secondaire {
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: none;
+}
+
+.page-simple .lien-secondaire a {
+    color: #c99c3a;
+    text-decoration: underline;
+}
+
+/* Navigation simple (mêmes liens, même ordre que la navbar Bootstrap) */
+header nav[aria-label="Navigation principale"] {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 10px;
+    background-color: #000000;
+    border-bottom: 1px solid #c99c3a;
+}
+
+header nav[aria-label="Navigation principale"] a {
+    color: #c99c3a;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+}
+
+header nav[aria-label="Navigation principale"] a:hover,
+header nav[aria-label="Navigation principale"] a:focus-visible,
+header nav[aria-label="Navigation principale"] a[aria-current="page"] {
+    color: #ffffff;
+}
+
+/* Formulaires des pages simples : intitulé visible + champ fluide */
+.groupe-champ {
+    margin-bottom: 18px;
+}
+
+.etiquette {
+    display: block;
+    margin-bottom: 6px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+.champ-texte {
+    background: transparent;
+    border: 1px solid #c99c3a;
+    color: #ffffff;
+    padding: 15px;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.champ-texte::placeholder {
+    color: #b0b0b0;
+}
+
+.btn-simple {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 0;
+    border: 1px solid #c99c3a;
+    background-color: transparent;
+    color: #c99c3a;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s all;
+}
+
+.btn-simple:hover {
+    background-color: #c99c3a;
+    color: #000000;
+    box-shadow: 0 0 20px rgba(201, 156, 58, 0.4);
+}
+
+.btn-simple.btn-gold:hover {
+    background-color: gold;
+}
+
+/* ============================================================
+   Formulaires : validation côté client (voir validation.js)
+   ============================================================ */
+.champ-erreur {
+    display: block;
+    margin-top: 6px;
+    color: #ff9b9b;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+.champ-erreur:empty {
+    display: none;
+}
+
+[aria-invalid="true"] {
+    border-color: #ff9b9b !important;
+}
+
+.statut-formulaire {
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+.statut-formulaire.succes {
+    color: #8be28b;
+}
+
+.statut-formulaire.erreur {
+    color: #ff9b9b;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 576px) {
+    header nav[aria-label="Navigation principale"] {
+        gap: 12px;
+        padding: 15px 8px;
+    }
+
+    header nav[aria-label="Navigation principale"] a {
+        font-size: 0.75rem;
+    }
+
+    .page-simple main p {
+        font-size: 15px;
+        letter-spacing: 3px;
+    }
+
+    .btn-simple {
+        width: 100%;
+        max-width: 320px;
+        padding: 15px 20px;
+    }
+}
+
+/* --- Respect de la préférence "mouvement réduit" --- */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+}

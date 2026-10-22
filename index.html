@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Power Website - Ton Objectif</title>
+    <meta name="description" content="Découvre ton programme fitness idéal en 30 secondes avec le quiz Power Website. Perte de poids, musculation, nutrition : reçois ton bilan personnalisé gratuit.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.powerwebsite.fr/">
+
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <meta property="og:title" content="Power Website - Trouve ton objectif fitness">
+    <meta property="og:description" content="Découvre ton programme fitness idéal en 30 secondes avec le quiz Power Website. Reçois ton bilan personnalisé gratuit.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.powerwebsite.fr/">
+    <meta property="og:image" content="https://www.powerwebsite.fr/assets/images/logo.png">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="assets/css/common.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsActivityLocation",
+      "name": "Power Website",
+      "url": "https://www.powerwebsite.fr/",
+      "logo": "https://www.powerwebsite.fr/assets/images/logo.png",
+      "description": "Coaching sportif en ligne : programmes de musculation, nutrition et perte de graisse.",
+      "sameAs": []
+    }
+    </script>
+  </head>
+  <body class="page-simple">
+    <a class="lien-evitement" href="#contenu-principal">Aller au contenu principal</a>
+
+    <main id="contenu-principal">
+      <h1>Bienvenue sur Power Website</h1>
+      <p>Quel est ton <strong>objectif prioritaire</strong> aujourd'hui ?</p>
+
+      <div class="choix-objectif">
+        <button type="button" class="btn-simple btn-objectif" data-objectif="perte_de_poids">Perte de poids</button>
+        <button type="button" class="btn-simple btn-objectif" data-objectif="renforcement_musculaire">Musculation</button>
+        <button type="button" class="btn-simple btn-objectif" data-objectif="nutrition">Nutrition &amp; Santé</button>
+      </div>
+
+      <div id="resultat">
+        <form id="formulaire-email" hidden novalidate>
+          <p>Reçois ton <strong>bilan offert</strong></p>
+
+          <input type="hidden" name="goal_id" id="hidden-goal-id" />
+
+          <div class="groupe-champ">
+            <label for="champ-nom" class="etiquette">Ton prénom</label>
+            <input type="text" id="champ-nom" name="nom" class="champ-texte"
+                   data-regle="nom" autocomplete="given-name" placeholder="Ex : Camille" required />
+          </div>
+
+          <div class="groupe-champ">
+            <label for="champ-email" class="etiquette">Ton email</label>
+            <input type="email" id="champ-email" name="email" class="champ-texte"
+                   data-regle="email" autocomplete="email" placeholder="nom@exemple.com" required />
+          </div>
+
+          <button type="submit" class="btn-simple btn-gold" title="Envoyer le formulaire d'inscription">
+            S'inscrire
+          </button>
+        </form>
+
+        <p class="lien-secondaire">
+          Déjà un compte ? <a href="pages/connexion.html" title="Se connecter à ton compte Power Website">Se connecter</a>
+        </p>
+      </div>
+    </main>
+
+    <footer class="pied-de-page">
+      <p>&copy; 2026 Power Website - Tous droits réservés.</p>
+    </footer>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/validation.js"></script>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

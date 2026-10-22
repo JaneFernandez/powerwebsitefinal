@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Power Website</title>
+    <meta name="description" content="Contactez un coach Power Website pour toute question sur nos programmes de musculation, nutrition ou nos abonnements. Réponse rapide garantie.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.powerwebsite.fr/pages/contact.html">
+
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+
+    <meta property="og:title" content="Contact - Power Website">
+    <meta property="og:description" content="Contactez un coach Power Website pour toute question sur nos programmes ou nos abonnements.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.powerwebsite.fr/pages/contact.html">
+    <meta property="og:image" content="https://www.powerwebsite.fr/assets/images/logo.png">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/contact.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.powerwebsite.fr/pages/accueil.html" },
+        { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.powerwebsite.fr/pages/contact.html" }
+      ]
+    }
+    </script>
+</head>
+<body class="page-sombre">
+    <a class="lien-evitement" href="#contenu-principal">Aller au contenu principal</a>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" aria-label="Navigation principale">
+      <div class="container">
+        <a class="navbar-brand logo-lien" href="accueil.html">
+          <img src="../assets/images/logo.png" alt="Power Website" width="150" height="50" class="logo-nav">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#monMenu" aria-controls="monMenu" aria-expanded="false" aria-label="Ouvrir le menu de navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="monMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="accueil.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="../index.html">Quiz</a></li>
+            <li class="nav-item"><a class="nav-link" href="programmes.html">Programmes</a></li>
+            <li class="nav-item"><a class="nav-link" href="accueil.html#abonnements">Abonnements</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html" aria-current="page">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="connexion.html">Connexion</a></li>
+            <li class="nav-item">
+              <button id="bouton-police-dyslexie" type="button" class="btn-accessibilite" aria-pressed="false">
+                Police dyslexie
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<main id="contenu-principal">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card-contact p-4 p-md-5">
+                <h1 class="h2 text-center text-gold fw-bold mb-4">CONTACTEZ UN COACH</h1>
+                <p class="text-center mb-4">Une question sur nos <strong>programmes</strong> ? Laissez-nous un message.</p>
+
+                <form id="formulaire-contact" novalidate>
+                    <div class="mb-3">
+                        <label class="form-label" for="champ-nom">Nom complet</label>
+                        <input type="text" id="champ-nom" name="nom" class="form-control" data-regle="nom"
+                               autocomplete="name" placeholder="Ex : Jean Dupont" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="champ-email">Adresse email</label>
+                        <input type="email" id="champ-email" name="email" class="form-control" data-regle="email"
+                               autocomplete="email" placeholder="nom@exemple.com" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="champ-sujet">Sujet</label>
+                        <select id="champ-sujet" name="sujet" class="form-control">
+                            <option value="programme">Question sur un programme</option>
+                            <option value="tarif">Tarifs et abonnements</option>
+                            <option value="autre">Autre demande</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label" for="champ-message">Message</label>
+                        <textarea id="champ-message" name="message" class="form-control" data-regle="message"
+                                  rows="5" placeholder="Comment pouvons-nous vous aider ?" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-gold w-100 py-2" title="Envoyer le message au coach">ENVOYER LE MESSAGE</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+
+    <footer class="pied-de-page">
+        <p>&copy; 2026 Power Website - Tous droits réservés.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/validation.js"></script>
+    <script src="../assets/js/contact.js"></script>
+
+</body>
+</html>

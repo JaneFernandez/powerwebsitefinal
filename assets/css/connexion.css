@@ -1,0 +1,14 @@
+/* connexion.css - uniquement ce qui est propre à la page de connexion.
+   Le reste est mutualisé dans common.css (.page-simple). */
+
+main {
+    padding: 60px 20px;
+}
+
+.page-simple main p {
+    margin-bottom: 40px;
+}
+
+form {
+    margin-top: 40px;
+}

@@ -1,0 +1,95 @@
+/* accueil.css - styles spécifiques à la page d'accueil */
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.video-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+    margin: 0 !important;
+}
+
+#myVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 2;
+}
+
+.content {
+    position: relative;
+    z-index: 3;
+    color: white;
+    text-align: center;
+}
+
+.accroche {
+    letter-spacing: 5px;
+}
+
+/* Bouton pause/lecture de la vidéo (RGAA 4.10 / 13.8) */
+.btn-pause-video {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 4;
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 1px solid #c99c3a;
+    cursor: pointer;
+}
+
+.btn-pause-video:hover {
+    background-color: #c99c3a;
+    color: #000000;
+}
+
+/* Calculateur IMC / besoins */
+.zone-graphique {
+    position: relative;
+    height: 280px;
+}
+
+.resultat-calcul {
+    padding: 20px;
+    border: 1px solid #c99c3a;
+}
+
+.resultat-calcul .mention {
+    font-size: 0.85rem;
+    color: #d0d0d0;
+}
+
+section[id] {
+    scroll-margin-top: 90px;
+}
+
+@media (max-width: 576px) {
+    .accroche {
+        letter-spacing: 2px;
+    }
+
+    .video-container .display-1 {
+        font-size: 3rem;
+    }
+}

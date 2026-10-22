@@ -1,0 +1,23 @@
+/* programmes.css - styles spécifiques à la page programmes
+   (body sombre, .btn-gold, .card-img-top : voir common.css) */
+
+.card {
+    background-color: #222;
+    border: 1px solid #c99c3a;
+    color: white;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: gold;
+}
+
+.card-title-custom {
+    font-size: 1.25rem;
+}
+
+/* Compense la navbar fixe quand on arrive via une ancre depuis accueil.html */
+article[id] {
+    scroll-margin-top: 90px;
+}

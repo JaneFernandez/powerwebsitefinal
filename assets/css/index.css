@@ -1,0 +1,48 @@
+/* index.css - uniquement ce qui est propre à la page quiz.
+   Le reste (body, h1, p, boutons, champs, liens) est dans common.css (.page-simple). */
+
+main {
+    padding: 40px 20px 60px;
+}
+
+.page-simple h1 {
+    font-size: clamp(2.5rem, 10vw, 4.4rem);
+}
+
+.page-simple main p {
+    margin-bottom: 60px;
+}
+
+.btn-objectif {
+    font-size: 20px;
+    margin: 15px;
+    padding: 20px 40px;
+}
+
+#resultat {
+    margin-top: 60px;
+}
+
+#formulaire-email {
+    margin-top: 30px;
+}
+
+#formulaire-email p {
+    margin-bottom: 25px;
+}
+
+.page-simple #resultat .lien-secondaire {
+    margin-top: 30px;
+}
+
+@media (max-width: 576px) {
+    .page-simple main p {
+        margin-bottom: 35px;
+    }
+
+    .btn-objectif {
+        margin: 8px;
+        padding: 15px 25px;
+        font-size: 16px;
+    }
+}
